@@ -3,13 +3,14 @@ import { motion } from 'framer-motion';
 import { Download, ArrowRight, Camera, Sparkles, CheckCircle2, RotateCcw, Cpu, Code2, Database } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
-import aiDevProfile from '../assets/aswathi_ai_tech_portrait.jpg';
-import corporateProfile from '../assets/aswathi_corporate_portrait.jpg';
-import originalPhoto from '../assets/aswathi_original.jpg';
+import formalAiLabProfile from '../assets/aswathi_formal_ai_lab.jpg';
+import formalDarkStudioProfile from '../assets/aswathi_formal_dark_studio.jpg';
+import formalSuitProfile from '../assets/aswathi_formal_suit.jpg';
+import casualProfile from '../assets/aswathi_original.jpg';
 
 const Hero = () => {
-  const [profileImage, setProfileImage] = useState(aiDevProfile);
-  const [activePreset, setActivePreset] = useState('aidev');
+  const [profileImage, setProfileImage] = useState(formalAiLabProfile);
+  const [activePreset, setActivePreset] = useState('formalAiLab');
   const [isCustomImage, setIsCustomImage] = useState(false);
   const fileInputRef = useRef(null);
 
@@ -21,15 +22,18 @@ const Hero = () => {
       setProfileImage(savedCustom);
       setIsCustomImage(true);
       setActivePreset('custom');
-    } else if (savedPreset === 'corporate') {
-      setProfileImage(corporateProfile);
-      setActivePreset('corporate');
-    } else if (savedPreset === 'original') {
-      setProfileImage(originalPhoto);
-      setActivePreset('original');
+    } else if (savedPreset === 'darkStudio') {
+      setProfileImage(formalDarkStudioProfile);
+      setActivePreset('darkStudio');
+    } else if (savedPreset === 'formalSuit') {
+      setProfileImage(formalSuitProfile);
+      setActivePreset('formalSuit');
+    } else if (savedPreset === 'casual') {
+      setProfileImage(casualProfile);
+      setActivePreset('casual');
     } else {
-      setProfileImage(aiDevProfile);
-      setActivePreset('aidev');
+      setProfileImage(formalAiLabProfile);
+      setActivePreset('formalAiLab');
     }
   }, []);
 
@@ -59,9 +63,9 @@ const Hero = () => {
   const handleResetImage = (e) => {
     e.stopPropagation();
     localStorage.removeItem('user_profile_custom');
-    localStorage.setItem('user_profile_preset', 'aidev');
-    setProfileImage(aiDevProfile);
-    setActivePreset('aidev');
+    localStorage.setItem('user_profile_preset', 'formalAiLab');
+    setProfileImage(formalAiLabProfile);
+    setActivePreset('formalAiLab');
     setIsCustomImage(false);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
@@ -216,7 +220,7 @@ const Hero = () => {
                   <img 
                     src={profileImage} 
                     alt="Aswathi R - Full Stack & AI Developer" 
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   />
                   
                   {/* Subtle dark gradient overlay at the bottom for contrast */}
@@ -291,34 +295,44 @@ const Hero = () => {
                 Style:
               </span>
               <button
-                onClick={() => handleSelectPreset('aidev', aiDevProfile)}
+                onClick={() => handleSelectPreset('formalAiLab', formalAiLabProfile)}
                 className={`px-3 py-1 text-xs font-semibold rounded-xl transition-all ${
-                  activePreset === 'aidev'
-                    ? 'bg-purple-600 text-white shadow-md'
-                    : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
-                }`}
-              >
-                ✨ AI Developer
-              </button>
-              <button
-                onClick={() => handleSelectPreset('corporate', corporateProfile)}
-                className={`px-3 py-1 text-xs font-semibold rounded-xl transition-all ${
-                  activePreset === 'corporate'
+                  activePreset === 'formalAiLab'
                     ? 'bg-blue-600 text-white shadow-md'
                     : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
                 }`}
               >
-                💼 Studio Pro
+                🤖 AI Lab
               </button>
               <button
-                onClick={() => handleSelectPreset('original', originalPhoto)}
+                onClick={() => handleSelectPreset('darkStudio', formalDarkStudioProfile)}
                 className={`px-3 py-1 text-xs font-semibold rounded-xl transition-all ${
-                  activePreset === 'original'
+                  activePreset === 'darkStudio'
+                    ? 'bg-indigo-600 text-white shadow-md'
+                    : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
+                }`}
+              >
+                💼 Dark Studio
+              </button>
+              <button
+                onClick={() => handleSelectPreset('formalSuit', formalSuitProfile)}
+                className={`px-3 py-1 text-xs font-semibold rounded-xl transition-all ${
+                  activePreset === 'formalSuit'
+                    ? 'bg-slate-800 text-white shadow-md'
+                    : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
+                }`}
+              >
+                👔 Original Suit
+              </button>
+              <button
+                onClick={() => handleSelectPreset('casual', casualProfile)}
+                className={`px-3 py-1 text-xs font-semibold rounded-xl transition-all ${
+                  activePreset === 'casual'
                     ? 'bg-slate-700 text-white shadow-md'
                     : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
                 }`}
               >
-                🌿 Original
+                🌿 Casual
               </button>
             </div>
           </motion.div>
