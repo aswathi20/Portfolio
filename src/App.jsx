@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Spotlight from './components/Spotlight';
 import Hero from './sections/Hero';
-import AIAvatarGuide from './components/AIAvatarGuide';
 import About from './sections/About';
 import Skills from './sections/Skills';
 import Experience from './sections/Experience';
@@ -29,7 +28,6 @@ function App() {
       <Header darkMode={darkMode} toggleTheme={toggleTheme} />
       <main>
         <Hero />
-        <AIAvatarGuide />
         <About />
         <Skills />
         <Experience />

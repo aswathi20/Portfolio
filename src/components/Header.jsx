@@ -15,7 +15,6 @@ const Header = ({ darkMode, toggleTheme }) => {
   }, []);
 
   const navLinks = [
-    { name: 'Avatar Guide', to: 'avatar-guide' },
     { name: 'About', to: 'about' },
     { name: 'Skills', to: 'skills' },
     { name: 'Experience', to: 'experience' },
