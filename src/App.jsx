@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
-import CustomCursor from './components/CustomCursor';
 import Spotlight from './components/Spotlight';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -26,7 +25,6 @@ function App() {
   return (
     <div className="min-h-screen bg-light-bg dark:bg-dark-bg text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300 relative">
       <Spotlight />
-      <CustomCursor />
       <Header darkMode={darkMode} toggleTheme={toggleTheme} />
       <main>
         <Hero />
