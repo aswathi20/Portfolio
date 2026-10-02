@@ -24,7 +24,7 @@ const Hero = () => {
       title: 'Production Systems (LOS & Sprint APIs)',
       tag: '10k+ Daily Txns • 99.9% Uptime',
       badgeText: '📈 "Over 10,000 txns/day scaled!"',
-      quote: "At Whitestone Software Solutions, I developed high-volume backend microservices for a Loan Operating System (LOS) with Java and Spring Boot. I optimized SQL queries to handle 10,000+ daily transactions with 40% reduced latency, while maintaining 99.9% application uptime.",
+      quote: "At Whitestone Software Solutions, I developed high-volume backend microservices for a Loan Operating System (LOS) with Java and Spring Boot, optimizing SQL queries for 10,000+ daily transactions with 40% reduced latency. I also served as Program Coordinator at Phoenix Solutions, bridging clients and technical teams.",
       actionText: 'View My Experience ↓',
       targetId: 'experience'
     },
@@ -80,7 +80,7 @@ const Hero = () => {
   const activeStory = stories[activeStoryIdx];
 
   // Comprehensive script covering the entire portfolio for generating the AI Talking Video
-  const videoScript = "Hello and welcome to my portfolio! I am Aswathi R, a Full Stack Developer and AI Enthusiast with over two years of experience engineering scalable enterprise web systems. At Whitestone Software Solutions, I developed high-volume backend microservices for a Loan Operating System using Java and Spring Boot, optimizing database queries across Oracle SQL and MySQL to process more than 10,000 daily transactions with a 40 percent latency reduction, while maintaining 99.9 percent uptime. My technical toolkit combines Core Java, Spring Boot, Hibernate, and RESTful microservices with modern AI Development—including Generative AI, LLM APIs, LangChain, and RAG architectures. Please explore my featured projects and skills below, and feel free to get in touch. Thank you for visiting!";
+  const videoScript = "Hello and welcome to my portfolio! I am Aswathi R, a Full Stack Developer and AI Enthusiast with over two years of experience engineering scalable enterprise web systems. At Whitestone Software Solutions, I developed high-volume backend microservices for a Loan Operating System using Java and Spring Boot, optimizing database queries across Oracle SQL and MySQL to process more than 10,000 daily transactions with a 40 percent latency reduction, while maintaining 99.9 percent uptime. I also coordinated cross-functional technical workflows at Phoenix Solutions. My technical toolkit combines Core Java, Spring Boot, React.js, and RESTful microservices with modern AI Development—including Generative AI, LLM APIs, LangChain, and RAG architectures. Please explore my featured projects and skills below, and feel free to get in touch. Thank you for visiting!";
 
   useEffect(() => {
     const savedVideo = localStorage.getItem('aswathi_avatar_video');
