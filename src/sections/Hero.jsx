@@ -79,8 +79,8 @@ const Hero = () => {
 
   const activeStory = stories[activeStoryIdx];
 
-  // Suggested script for user to generate AI talking video from D-ID or HeyGen
-  const videoScript = "Hello! I am Aswathi R, a Full Stack Developer and AI Enthusiast with hands-on experience in building enterprise-grade Java and Spring Boot systems, handling over 10,000 daily transactions. I am actively expanding into AI development with Generative AI, LLM APIs, and intelligent automated workflows. Welcome to my portfolio!";
+  // Comprehensive script covering the entire portfolio for generating the AI Talking Video
+  const videoScript = "Hello and welcome to my portfolio! I am Aswathi R, a Full Stack Developer and AI Enthusiast with over two years of experience engineering scalable enterprise web systems. At Whitestone Software Solutions, I developed high-volume backend microservices for a Loan Operating System using Java and Spring Boot, optimizing database queries across Oracle SQL and MySQL to process more than 10,000 daily transactions with a 40 percent latency reduction, while maintaining 99.9 percent uptime. My technical toolkit combines Core Java, Spring Boot, Hibernate, and RESTful microservices with modern AI Development—including Generative AI, LLM APIs, LangChain, and RAG architectures. Please explore my featured projects and skills below, and feel free to get in touch. Thank you for visiting!";
 
   useEffect(() => {
     const savedVideo = localStorage.getItem('aswathi_avatar_video');
